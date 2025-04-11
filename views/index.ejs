@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="stylesheet/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3 id="logo">Store Notes</h3>
+      <div class="form">
+        <form method="post" id="form" action="/user/user11/addNote">
+          <label for="text">enter note name</label>
+          <input type="text" name="title" id="title">
+  
+          <label for="text">enter note description</label>
+          <textarea name="textarea" id="textarea"></textarea>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+      <% if (data && data.fileNames && data.fileNames.length > 0) { %>
+        <% data.fileNames.forEach((elem, index) => { %>
+          <h4 id="all-notes">All Notes</h4>
+          <div class="notes">
+            <div class="note">
+              <h4><%= elem %></h4>
+              <p class="note-description"><%= data.filedata[index] %></p>
+              <a href="<%= '/user11/' + elem.replace('.txt', '') %>">see more..</a>
+            </div>
+          </div>
+          <% }) %>
+        <% } else { %>
+          <div class="notask">
+            <h1>No Task Available</h1>
+          </div>
+        <% } %>
+      <div class="margin"></div>
+    <script src="javascript/index.js"></script>
+  </body>
+</html>

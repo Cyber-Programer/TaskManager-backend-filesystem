@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    padding:3%;
+}
+
+#logo{
+    font-size: xx-large;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5%;
+    text-transform: capitalize;
+    text-align: start;
+    font-size: large;
+    font-weight: bolder;
+    color: #333;
+}
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+
+input[type="submit"]{
+    margin-top: 5%;
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #555;
+}
+
+
+textarea{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    resize: none;
+}
+
+
+/*  Shwo Notes */
+
+.notes{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#all-notes{
+    margin-top: 10%;
+    display: grid;
+}
+
+
+.notes h4{
+    font-size: large;
+    font-weight: bolder;
+    color: #333;
+    display: inline-block;
+}
+
+.notes h4::after{
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #333;
+    margin-top: 3px;
+}
+
+.notes .note{
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notask{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.note p{
+    min-height: fit-content;
+    padding: 1rem 0;
+}
+
+
+.see-more {
+    display: none; /* Initially hidden */
+    color: rgb(70, 70, 187);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.margin{
+    width: 100%;
+    height: 10vh;
+}
